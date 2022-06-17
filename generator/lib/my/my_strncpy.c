@@ -1,0 +1,23 @@
+/*
+** EPITECH PROJECT, 2021
+** my_strcpy.c
+** File description:
+** copy n string chars into another
+*/
+
+int my_strlen(char const *str);
+
+char *my_strncpy(char *dest, char const *src, int n)
+{
+    int i = 0;
+
+    while (i < n && src[i] != '\0') {
+        dest[i] = src[i];
+        i++;
+    }
+    while (i < n) {
+        dest[i] = '\0';
+        i++;
+    }
+    return (dest);
+}
